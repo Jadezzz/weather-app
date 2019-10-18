@@ -58,7 +58,7 @@ const useWeatherApi = currentLocation => {
   const { locationName, cityName } = currentLocation;
 
   const [weatherElement, setWeatherElement] = useState({
-    observationTime: new Date(),
+    observationTime: "1998-02-02 00:00:00",
     locationName: "",
     humid: 0,
     description: "",
