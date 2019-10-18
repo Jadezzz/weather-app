@@ -157,7 +157,7 @@ const WeatherCard = props => {
         {new Intl.DateTimeFormat("zh-TW", {
           hour: "numeric",
           minute: "numeric"
-        }).format(new Date(observationTime))}{" "}
+        }).format(new Date(observationTime.toString().replace(/-/g, "/")))}{" "}
         {isLoading ? <LoadingIcon /> : <RefreshIcon />}
       </Refresh>
     </WeatherCardWrapper>
