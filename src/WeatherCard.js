@@ -154,10 +154,7 @@ const WeatherCard = props => {
       </Rain>
       <Refresh onClick={fetchData} isLoading={isLoading}>
         最後觀測時間：
-        {new Intl.DateTimeFormat("zh-TW", {
-          hour: "numeric",
-          minute: "numeric"
-        }).format(new Date(observationTime))}{" "}
+        {observationTime.split(" ")[1].slice(0, 5)}{" "}
         {isLoading ? <LoadingIcon /> : <RefreshIcon />}
       </Refresh>
     </WeatherCardWrapper>
